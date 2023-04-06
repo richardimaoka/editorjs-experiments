@@ -1,8 +1,9 @@
 import EditorJS from "@editorjs/editorjs";
 import { useEffect } from "react";
 
-export const MyComponent = () => {
+const MyComponent = () => {
   useEffect(() => {
+    console.log("===============================");
     const editor = new EditorJS({
       /**
        * Id of Element that should contain Editor instance
@@ -12,3 +13,5 @@ export const MyComponent = () => {
   });
   return <></>;
 };
+
+export default MyComponent;
