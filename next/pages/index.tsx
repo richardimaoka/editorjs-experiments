@@ -1,6 +1,5 @@
 import { OutputData } from "@editorjs/editorjs";
 import dynamic from "next/dynamic";
-import { Inter } from "next/font/google";
 import { useState } from "react";
 
 const EditorBlock = dynamic(() => import("../components/Editor"), {
