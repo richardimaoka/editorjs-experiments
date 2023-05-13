@@ -20,12 +20,17 @@ const EditorBlock = ({ data, onChange, holder }: Props) => {
     if (!ref.current) {
       const editor = new EditorJS({
         holder: holder,
-        tools: EDITOR_TOOLS,
+        // tools: EDITOR_TOOLS,
         data,
-        async onChange(api, event) {
-          const data = await api.saver.save();
-          onChange(data);
+        onChange: (api, event) => {
+          console.log("Now I know that Editor's content changed!", event);
         },
+        //   async onChange(api, event) {
+        //     const data = await api.saver.save();
+        //     console.log("onChange event:", event);
+        //     console.log("onChange data :", data);
+        //     onChange(data);
+        //   },
       });
       ref.current = editor;
     }
